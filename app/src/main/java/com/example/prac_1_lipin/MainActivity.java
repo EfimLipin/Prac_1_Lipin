@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         useToast("onCreate is called");
+        Log.i(TAG, "The app created successfully");
     }
 
     @Override
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         useToast("onStop is called");
+        Log.i(TAG, "The app stopped successfully");
     }
 
     @Override
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         useToast("onResume is called");
+        Log.i(TAG, "The app resumed successfully");
     }
 
     public void useToast(CharSequence text) {
