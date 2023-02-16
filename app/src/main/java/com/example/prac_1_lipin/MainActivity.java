@@ -3,10 +3,12 @@ package com.example.prac_1_lipin;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "Prac_1_Lipin";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         useToast("onStart is called");
+        Log.d(TAG, "The app launched successfully");
     }
 
     @Override
@@ -30,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         useToast("onDestroy is called");
+        Log.i(TAG, "The app closed successfully");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         useToast("onPause is called");
+        Log.e(TAG, "No errors have occurred in onPause method");
     }
 
     @Override
